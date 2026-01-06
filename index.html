@@ -4,62 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>C&A Study Support</title>
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Navigation Ribbon -->
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="subjects/specialist-maths.html">Specialist Maths</a></li>
-          <li><a href="subjects/methods-maths.html">Methods Maths</a></li>
-          <li><a href="subjects/chemistry.html">Chemistry</a></li>
-          <li><a href="subjects/biology.html">Biology</a></li>
-          <li><a href="subjects/english-literature.html">English Literature</a></li>
-          <li><a href="subjects/economics.html">Economics</a></li>
-          <li><a href="subjects/psychology.html">Psychology</a></li>
-          <li><a href="subjects/primary-maths.html">Primary Maths</a></li>
-          <li><a href="subjects/primary-english.html">Primary English</a></li>
-          <li><a href="subjects/primary-science.html">Primary Science</a></li>
-          <li><a href="subjects/systems-physiology.html">Systems Physiology</a></li>
-          <li><a href="subjects/french.html">French</a></li>
-          <li><a href="subjects/anatomy.html">Anatomy</a></li>
-        </ul>
-      </li>
-      <li><a href="bookings.html">Book a Lesson</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hero Section -->
-  <section id="hero" style="position: relative; height: 100vh; text-align: center; background: url('images/studying.jpg') no-repeat center center/cover;">
-    <div class="hero-overlay" style="position: absolute; top: 0; left:0; width: 100%; height:100%; background: rgba(0,0,0,0.5); display: flex; flex-direction: column; justify-content: center; align-items: center; color: #fff;">
-      <h1 style="font-size: 3rem; margin-bottom: 20px;">C&A Study Support</h1>
-      <p style="font-size: 1.5rem; margin-bottom: 30px;">Making learning easy for everyone with personalised tutoring</p>
+<!-- NAVBAR -->
+<nav class="navbar">
+  <ul class="nav-list">
+    <li><a href="index.html">Home</a></li>
 
-      <!-- Direct Booking Link -->
-      <a href="https://castudysupport-04.youcanbook.me/" target="_blank">
-        <button style="padding: 15px 40px; font-size: 1.2rem; border:none; background:#007BFF; color:white; border-radius:8px; cursor:pointer;">
-          Book a Lesson
-        </button>
-      </a>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="subjects/specialist-maths.html">Specialist Maths</a></li>
+        <li><a href="subjects/methods-maths.html">Methods Maths</a></li>
+        <li><a href="subjects/chemistry.html">Chemistry</a></li>
+        <li><a href="subjects/biology.html">Biology</a></li>
+        <li><a href="subjects/english-literature.html">English Literature</a></li>
+        <li><a href="subjects/economics.html">Economics</a></li>
+        <li><a href="subjects/psychology.html">Psychology</a></li>
+        <li><a href="subjects/french.html">French</a></li>
+        <li><a href="subjects/anatomy.html">Anatomy</a></li>
+        <li><a href="subjects/systems-physiology.html">Systems Physiology</a></li>
+        <li><a href="subjects/primary-maths.html">Primary Maths</a></li>
+        <li><a href="subjects/primary-english.html">Primary English</a></li>
+        <li><a href="subjects/primary-science.html">Primary Science</a></li>
+      </ul>
+    </li>
+
+    <li class="dropdown">
+      <a href="#">Tutors</a>
+      <ul class="dropdown-content">
+        <li><a href="subjects/tutor-caleb.html">Caleb Packer</a></li>
+        <li><a href="subjects/tutor-abraur.html">Abraur Ullah</a></li>
+      </ul>
+    </li>
+
+    <li><a href="https://castudysupport-04.youcanbook.me/" target="_blank">Book</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-content">
+    <h1>C&A Study Support</h1>
+    <p>Personalised tutoring designed to make learning simple, effective, and accessible.</p>
+    <a href="https://castudysupport-04.youcanbook.me/" target="_blank" class="btn-primary">
+      Book a Lesson
+    </a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section">
+  <h2>About Us</h2>
+  <p>
+    Formed in January 2025 by Caleb Packer and Abraur Ullah, C&A Study Support aims to make
+    learning easy for everyone. We recognise that everyone learns differently, which is why
+    personalised tutoring is standard for all of our students.
+  </p>
+</section>
+
+<!-- SUBJECTS -->
+<section class="section">
+  <h2>Subjects Offered</h2>
+
+  <div class="subjects-grid">
+    <div class="subject-card">
+      <h3>Specialist Maths</h3>
+      <p>$60 per hour</p>
+      <a href="subjects/specialist-maths.html">View details</a>
     </div>
-  </section>
 
-  <!-- About Section -->
-  <section id="about" style="padding:50px; max-width:900px; margin:0 auto;">
-    <h2>About Us</h2>
-    <p>Formed in 2025 by Caleb Packer and Abraur Ullah, C&A Study Support aims to make learning easy for everyone. Here at C&A Study Support, we recognise that everyone learns differently, which is why we offer personalised tutoring as standard for all of our patrons to improve their learning experience.</p>
-  </section>
+    <div class="subject-card">
+      <h3>Methods Maths</h3>
+      <p>$50 per hour</p>
+      <a href="subjects/methods-maths.html">View details</a>
+    </div>
 
-  <!-- Footer -->
-  <footer style="text-align:center; padding:20px; background:#f1f1f1;">
-    <p>&copy; 2025 C&A Study Support</p>
-  </footer>
+    <div class="subject-card">
+      <h3>Chemistry</h3>
+      <p>$50 per hour</p>
+      <a href="subjects/chemistry.html">View details</a>
+    </div>
+  </div>
+</section>
+
+<!-- TUTORS -->
+<section class="section">
+  <h2>Our Tutors</h2>
+
+  <div class="subjects-grid">
+    <div class="subject-card">
+      <h3>Caleb Packer</h3>
+      <p>Senior Academic Tutor</p>
+      <a href="subjects/tutor-caleb.html">View profile</a>
+    </div>
+
+    <div class="subject-card">
+      <h3>Abraur Ullah</h3>
+      <p>Academic Tutor</p>
+      <a href="subjects/tutor-abraur.html">View profile</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 C&A Study Support</p>
+</footer>
+
 </body>
 </html>
-
