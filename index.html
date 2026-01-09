@@ -5,8 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>C&A Study Support</title>
   <meta name="description" content="C&A Study Support offers personalised tutoring for secondary and primary school students. Learn Maths, English, Science, and languages with experienced tutors Caleb and Abraur.">
-  <meta name="keywords" content="tutoring, maths, english, science, Russian, Bengali, secondary school, primary school, Caleb, Abraur">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ----- BASE RESET ----- */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; scroll-behavior: smooth; }
+    h1,h2,h3{ margin-bottom: 15px; font-weight: 600; }
+    p{ font-size:1.05rem; line-height:1.8; }
+
+    /* ----- NAVBAR ----- */
+    .navbar{ background: #007bff; padding: 10px 20px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000;}
+    .navbar .logo a{ color:white; text-decoration:none; font-weight:bold; font-size:1.3rem; }
+    .nav-list{ list-style:none; display:flex; align-items:center; }
+    .nav-list li{ position:relative; }
+    .nav-list a{ color:white; text-decoration:none; padding:10px 15px; display:block; transition:0.2s; }
+    .nav-list a:hover{ background:#0056b3; border-radius:5px; }
+    .dropdown-content{ display:none; position:absolute; background:#007bff; min-width:220px; top:100%; left:0; z-index:1000; }
+    .dropdown:hover .dropdown-content{ display:block; }
+    .hamburger{ display:none; flex-direction:column; cursor:pointer; }
+    .hamburger div{ width:25px; height:3px; background:white; margin:4px 0; }
+
+    /* ----- HERO ----- */
+    .subject-hero{ background: linear-gradient(135deg,#007bff,#00aaff); color:white; text-align:center; padding:100px 20px; position:relative; overflow:hidden; }
+    .subject-hero-content{ max-width:900px; margin:0 auto; }
+    .subject-hero h1{ font-size:3rem; margin-bottom:10px; animation:fadeSlideDown 1s ease forwards; opacity:0; }
+    .subject-hero p{ font-size:1.2rem; margin-bottom:20px; animation:fadeSlideUp 1s 0.3s ease forwards; opacity:0; }
+    @keyframes fadeSlideDown{ 0%{opacity:0; transform:translateY(-30px);} 100%{opacity:1; transform:translateY(0);} }
+    @keyframes fadeSlideUp{ 0%{opacity:0; transform:translateY(30px);} 100%{opacity:1; transform:translateY(0);} }
+
+    /* ----- BUTTONS ----- */
+    .primary-button{ display:inline-block; padding:12px 30px; background:#007bff; color:white; text-decoration:none; border-radius:25px; font-weight:bold; margin:5px; box-shadow:0 5px 15px rgba(0,0,0,0.1); transition:0.3s; }
+    .primary-button:hover{ background:#0056b3; transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,0.2); }
+
+    /* ----- SECTIONS ----- */
+    .content-container{ max-width:1000px; margin:60px auto; padding:0 20px; }
+    .tutor-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:25px; }
+    .tutor-card, .card{ background:#f9f9f9; padding:25px; border-radius:12px; text-align:center; transition:transform 0.3s, box-shadow 0.3s; text-decoration:none; color:#333; opacity:0; transform:translateY(20px);}
+    .tutor-card:hover, .card:hover{ transform:translateY(-8px) scale(1.02); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+
+    /* ----- FOOTER ----- */
+    .site-footer{ text-align:center; padding:30px; background:#f2f2f2; margin-top:60px; }
+
+    /* ----- MEDIA ----- */
+    @media(max-width:768px){
+      .nav-list{ flex-direction:column; align-items:flex-start; display:none; width:100%; }
+      .nav-list.active{ display:flex; }
+      .dropdown-content{ position:static; }
+      .hamburger{ display:flex; }
+    }
+  </style>
 </head>
 <body>
 
@@ -45,7 +92,7 @@
   </nav>
 
   <!-- HERO -->
-  <section id="hero" class="subject-hero">
+  <section class="subject-hero">
     <div class="subject-hero-content">
       <h1>C&A Study Support</h1>
       <p>Making learning easy for everyone with personalised tutoring</p>
@@ -55,28 +102,22 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="content-container info-section">
+  <section id="about" class="content-container">
     <h2>About Us</h2>
     <p>Formed in 2025 by Caleb Packer and Abraur Ullah, C&A Study Support provides personalised tutoring for all students. We recognise everyone learns differently and tailor lessons to maximise results and confidence.</p>
   </section>
 
   <!-- TUTORS -->
-  <section id="tutors" class="content-container info-section">
+  <section id="tutors" class="content-container">
     <h2>Meet Our Tutors</h2>
     <div class="tutor-grid">
-      <div class="tutor-card">
-        <h3>Caleb</h3>
-        <p>Specialist Maths, Mathematical Methods, English Literature, Russian, Economics, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p>
-      </div>
-      <div class="tutor-card">
-        <h3>Abraur</h3>
-        <p>Specialist Maths, Mathematical Methods, English Literature, Bengali, Psychology, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p>
-      </div>
+      <div class="tutor-card"><h3>Caleb</h3><p>Specialist Maths, Mathematical Methods, English Literature, Russian, Economics, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p></div>
+      <div class="tutor-card"><h3>Abraur</h3><p>Specialist Maths, Mathematical Methods, English Literature, Bengali, Psychology, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p></div>
     </div>
   </section>
 
   <!-- SUBJECTS -->
-  <section id="subjects-overview" class="content-container info-section">
+  <section id="subjects-overview" class="content-container">
     <h2>Subjects We Teach</h2>
     <div class="tutor-grid">
       <a class="card" href="subjects/specialist-maths/index.html">Specialist Maths</a>
@@ -95,7 +136,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="content-container info-section">
+  <section id="contact" class="content-container">
     <h2>Contact Us</h2>
     <form action="https://formspree.io/f/yourformid" method="POST">
       <label for="name">Name:</label><input type="text" id="name" name="name" required>
@@ -110,5 +151,68 @@
     <p>&copy; 2026 C&A Study Support</p>
   </footer>
 
+  <!-- ----- JAVASCRIPT FOR ANIMATIONS ----- -->
+  <script>
+    // Fade-in sections on scroll
+    const fadeElements = document.querySelectorAll('.tutor-card, .card, .content-container');
+    const fadeInOnScroll = () => {
+      fadeElements.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50){
+          setTimeout(() => { el.style.opacity = 1; el.style.transform = 'translateY(0)'; }, index * 150);
+        }
+      });
+    }
+    window.addEventListener('scroll', fadeInOnScroll);
+    window.addEventListener('load', fadeInOnScroll);
+
+    // Hamburger mobile toggle
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    hamburger.addEventListener('click', () => {
+      navList.classList.toggle('active');
+    });
+
+    // Smooth scroll for internal links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e){
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+      });
+    });
+  </script>
 </body>
+<script>
+  // Fade-in elements on scroll
+  const fadeElements = document.querySelectorAll('.tutor-card, .card, .content-container');
+  const fadeInOnScroll = () => {
+    fadeElements.forEach((el, index) => {
+      const rect = el.getBoundingClientRect();
+      if(rect.top < window.innerHeight - 50){
+        setTimeout(() => { 
+          el.style.opacity = 1; 
+          el.style.transform = 'translateY(0)'; 
+        }, index * 150);
+      }
+    });
+  }
+  window.addEventListener('scroll', fadeInOnScroll);
+  window.addEventListener('load', fadeInOnScroll);
+
+  // Hamburger toggle
+  const hamburger = document.querySelector('.hamburger');
+  const navList = document.querySelector('.nav-list');
+  hamburger.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+
 </html>

@@ -1,24 +1,49 @@
-/* RESET */
+/* ===== RESET ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE */
+/* ===== BASE STYLES ===== */
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
   color: #333;
+  background: #f8f9fa;
+  scroll-behavior: smooth;
 }
 
-/* NAVBAR */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ===== NAVBAR ===== */
 .navbar {
   background-color: #007bff;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
 }
 
 .nav-list {
@@ -33,9 +58,9 @@ body {
 
 .nav-list a {
   color: white;
-  text-decoration: none;
   padding: 10px 15px;
   display: block;
+  transition: 0.2s;
 }
 
 .nav-list a:hover {
@@ -58,12 +83,28 @@ body {
   display: block;
 }
 
-/* HERO */
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* ===== HERO ===== */
 .subject-hero {
-  background: #007bff;
+  background: linear-gradient(135deg, #007bff, #00aaff);
   color: white;
-  padding: 80px 20px;
   text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
 }
 
 .subject-hero-content {
@@ -71,53 +112,82 @@ body {
   margin: 0 auto;
 }
 
-/* CONTENT SECTIONS */
+.subject-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s forwards;
+}
+
+.subject-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1s 0.3s forwards;
+}
+
+@keyframes fadeSlideDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeSlideUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== BUTTONS ===== */
+.primary-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #007bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 25px;
+  margin: 5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* ===== SECTIONS ===== */
 .content-container {
   max-width: 1000px;
   margin: 60px auto;
   padding: 0 20px;
 }
 
-/* TUTORS & SUBJECTS GRID */
 .tutor-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
 }
 
+/* CARDS */
 .tutor-card, .card {
-  background: #f9f9f9;
+  background: #fff;
   padding: 25px;
-  border-radius: 10px;
+  border-radius: 12px;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
-  text-decoration: none;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+  opacity: 0;
+  transform: translateY(20px);
   color: #333;
 }
 
 .tutor-card:hover, .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-/* BUTTONS */
-.primary-button {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-  font-weight: bold;
-  margin: 5px;
-  text-align: center;
-}
-
-.primary-button:hover {
-  background: #0056b3;
-}
-
-/* FOOTER */
+/* ===== FOOTER ===== */
 .site-footer {
   text-align: center;
   padding: 30px;
@@ -125,14 +195,24 @@ body {
   margin-top: 60px;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .nav-list {
+/* ===== MEDIA QUERIES ===== */
+@media(max-width:768px){
+  .nav-list{
     flex-direction: column;
     align-items: flex-start;
+    display: none;
+    width: 100%;
   }
 
-  .dropdown-content {
+  .nav-list.active{
+    display: flex;
+  }
+
+  .dropdown-content{
     position: static;
+  }
+
+  .hamburger{
+    display:flex;
   }
 }
