@@ -10,7 +10,7 @@
 </head>
 <body>
 
-  <!-- Navbar -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="logo"><a href="index.html">C&A Study Support</a></div>
     <ul class="nav-list">
@@ -44,122 +44,71 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section id="hero">
-    <div class="hero-overlay">
+  <!-- HERO -->
+  <section id="hero" class="subject-hero">
+    <div class="subject-hero-content">
       <h1>C&A Study Support</h1>
       <p>Making learning easy for everyone with personalised tutoring</p>
-      <a href="bookings.html"><button>Book a Lesson</button></a>
-      <a href="#contact"><button>Contact Us</button></a>
+      <a href="bookings.html" class="primary-button">Book a Lesson</a>
+      <a href="#contact" class="primary-button">Contact Us</a>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="fade-in">
+  <!-- ABOUT -->
+  <section id="about" class="content-container info-section">
     <h2>About Us</h2>
     <p>Formed in 2025 by Caleb Packer and Abraur Ullah, C&A Study Support provides personalised tutoring for all students. We recognise everyone learns differently and tailor lessons to maximise results and confidence.</p>
   </section>
 
-  <div class="section-separator"></div>
-
-  <!-- Tutors -->
-  <section id="tutors" class="fade-in">
+  <!-- TUTORS -->
+  <section id="tutors" class="content-container info-section">
     <h2>Meet Our Tutors</h2>
-    <div class="card-container">
-      <div class="card"><img src="" alt="Caleb"><h3>Caleb</h3><p>Specialist Maths, Mathematical Methods, English Literature, Russian, Economics, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p></div>
-      <div class="card"><img src="" alt="Abraur"><h3>Abraur</h3><p>Specialist Maths, Mathematical Methods, English Literature, Bengali, Psychology, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p></div>
+    <div class="tutor-grid">
+      <div class="tutor-card">
+        <h3>Caleb</h3>
+        <p>Specialist Maths, Mathematical Methods, English Literature, Russian, Economics, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p>
+      </div>
+      <div class="tutor-card">
+        <h3>Abraur</h3>
+        <p>Specialist Maths, Mathematical Methods, English Literature, Bengali, Psychology, Biology, Chemistry, Primary School Maths, Primary School English, Primary School Science</p>
+      </div>
     </div>
   </section>
 
-  <div class="section-separator"></div>
-
-  <!-- Subjects -->
-  <section id="subjects-overview" class="fade-in">
+  <!-- SUBJECTS -->
+  <section id="subjects-overview" class="content-container info-section">
     <h2>Subjects We Teach</h2>
-    <div class="card-container">
-      <div class="card"><h3>Specialist Maths</h3></div>
-      <div class="card"><h3>Mathematical Methods</h3></div>
-      <div class="card"><h3>English Literature</h3></div>
-      <div class="card"><h3>Russian</h3></div>
-      <div class="card"><h3>Bengali</h3></div>
-      <div class="card"><h3>Economics</h3></div>
-      <div class="card"><h3>Biology</h3></div>
-      <div class="card"><h3>Chemistry</h3></div>
-      <div class="card"><h3>Psychology</h3></div>
-      <div class="card"><h3>Primary School Maths</h3></div>
-      <div class="card"><h3>Primary School English</h3></div>
-      <div class="card"><h3>Primary School Science</h3></div>
+    <div class="tutor-grid">
+      <a class="card" href="subjects/specialist-maths/index.html">Specialist Maths</a>
+      <a class="card" href="subjects/mathematical-methods/index.html">Mathematical Methods</a>
+      <a class="card" href="subjects/english-literature/index.html">English Literature</a>
+      <a class="card" href="subjects/russian/index.html">Russian</a>
+      <a class="card" href="subjects/bengali/index.html">Bengali</a>
+      <a class="card" href="subjects/economics/index.html">Economics</a>
+      <a class="card" href="subjects/biology/index.html">Biology</a>
+      <a class="card" href="subjects/chemistry/index.html">Chemistry</a>
+      <a class="card" href="subjects/psychology/index.html">Psychology</a>
+      <a class="card" href="subjects/primary-school-maths/index.html">Primary Maths</a>
+      <a class="card" href="subjects/primary-school-english/index.html">Primary English</a>
+      <a class="card" href="subjects/primary-school-science/index.html">Primary Science</a>
     </div>
   </section>
 
-  <div class="section-separator"></div>
-
-  <!-- Testimonials -->
-  <section id="testimonials" class="fade-in">
-    <h2>Testimonials</h2>
-    <div class="card-container">
-      <div class="card"><p>"C&A Study Support helped me ace my exams! Highly recommend."</p><h4>- Student</h4></div>
-      <div class="card"><p>"The tutoring sessions are personalised and effective."</p><h4>- Parent</h4></div>
-    </div>
-  </section>
-
-  <div class="section-separator"></div>
-
-  <!-- Contact -->
-  <section id="contact" class="fade-in">
+  <!-- CONTACT -->
+  <section id="contact" class="content-container info-section">
     <h2>Contact Us</h2>
-    <p>Have questions or want to book a lesson? Fill out the form below:</p>
     <form action="https://formspree.io/f/yourformid" method="POST">
       <label for="name">Name:</label><input type="text" id="name" name="name" required>
       <label for="email">Email:</label><input type="email" id="email" name="email" required>
       <label for="message">Message:</label><textarea id="message" name="message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
+      <button type="submit" class="primary-button">Send Message</button>
     </form>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
     <p>&copy; 2026 C&A Study Support</p>
-    <div class="social-icons">
-      <a href="#" title="Facebook">F</a>
-      <a href="#" title="Twitter">T</a>
-      <a href="#" title="Instagram">I</a>
-    </div>
   </footer>
-
-  <!-- Scripts -->
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e){
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-      });
-    });
-
-    // Dropdown toggle mobile
-    document.querySelectorAll('.dropdown > a').forEach(el => {
-      el.addEventListener('click', e => {
-        if(window.innerWidth <= 768){
-          e.preventDefault();
-          el.parentElement.classList.toggle('active');
-        }
-      });
-    });
-
-    // Staggered fade-in for cards
-    const allCards = document.querySelectorAll('.card');
-    const fadeOnScroll = () => {
-      allCards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 50){
-          setTimeout(()=>{ card.classList.add('visible'); }, index * 150);
-        }
-      });
-    }
-    window.addEventListener('scroll', fadeOnScroll);
-    window.addEventListener('load', fadeOnScroll);
-  </script>
 
 </body>
 </html>
