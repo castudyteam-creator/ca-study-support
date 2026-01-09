@@ -94,4 +94,30 @@
 </footer>
 
 </body>
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>&copy; 2026 C&A Study Support</p>
+</footer>
+
+<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
+<script>
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  // Dropdown toggle for mobile
+  document.querySelectorAll('.dropdown > a').forEach(el => {
+    el.addEventListener('click', e => {
+      if(window.innerWidth <= 768){
+        e.preventDefault();
+        el.parentElement.classList.toggle('active');
+      }
+    });
+  });
+</script>
+
 </html>
