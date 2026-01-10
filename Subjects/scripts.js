@@ -2,12 +2,14 @@
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e){
     e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
+    const target = document.querySelector(this.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth'});
   });
 });
 
-// Dropdown toggle for mobile
-document.querySelectorAll('.dropdown > a').forEach(el => {
+// Mobile dropdown toggle
+const dropdowns = document.querySelectorAll('.dropdown > a');
+dropdowns.forEach(el => {
   el.addEventListener('click', e => {
     if(window.innerWidth <= 768){
       e.preventDefault();
@@ -16,7 +18,14 @@ document.querySelectorAll('.dropdown > a').forEach(el => {
   });
 });
 
-// Staggered fade-in for cards
+// Close mobile dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  if(!e.target.closest('.dropdown') && !e.target.closest('.dropdown-content')){
+    document.querySelectorAll('.dropdown.active').forEach(drop => drop.classList.remove('active'));
+  }
+});
+
+// Staggered fade-in for cards with debounce
 const allCards = document.querySelectorAll('.card');
 const fadeOnScroll = () => {
   allCards.forEach((card, index) => {
@@ -26,20 +35,21 @@ const fadeOnScroll = () => {
     }
   });
 };
-window.addEventListener('scroll', fadeOnScroll);
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(fadeOnScroll, 100);
+});
 window.addEventListener('load', fadeOnScroll);
 
-// Card hover effect (scale + shadow)
-allCards.forEach(card => {
-  card.addEventListener('mouseenter', () => card.style.transform = 'scale(1.03)');
-  card.addEventListener('mouseleave', () => card.style.transform = '');
-});
-
-// Contact form submission via Formspree
+// Contact form submission
 const form = document.getElementById('contact-form');
+const feedback = document.getElementById('form-feedback');
+
 form.addEventListener('submit', async function(e){
   e.preventDefault();
   const formData = new FormData(form);
+  feedback.textContent = "Sending...";
   try {
     const response = await fetch(form.action, {
       method: form.method,
@@ -47,12 +57,17 @@ form.addEventListener('submit', async function(e){
       headers: { 'Accept': 'application/json' }
     });
     if(response.ok){
-      alert("Message sent! We'll get back to you soon.");
+      feedback.textContent = "Message sent! We'll get back to you soon.";
       form.reset();
     } else {
-      alert("Oops! Something went wrong. Please try again.");
+      feedback.textContent = "Oops! Something went wrong. Please try again.";
     }
-  } catch (error) {
-    alert("Network error. Please try again later.");
+  } catch {
+    feedback.textContent = "Network error. Please try again later.";
   }
+});
+
+// Hamburger toggle
+document.querySelector('.hamburger').addEventListener('click', () => {
+  document.querySelector('.nav-list').classList.toggle('active');
 });
