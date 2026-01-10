@@ -4,17 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>C&A Study Support</title>
-  <meta name="description" content="C&A Study Support offers personalised tutoring for secondary and primary school students. Learn Maths, English, Science, and languages with experienced tutors Caleb and Abraur.">
-  <meta name="keywords" content="tutoring, maths, english, science, Russian, Bengali, secondary school, primary school, Caleb, Abraur">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="logo"><a href="index.html">C&A Study Support</a></div>
     <ul class="nav-list">
-      <li><a href="index.html">Home</a></li>
       <li class="dropdown">
         <a href="#">Subjects</a>
         <ul class="dropdown-content">
@@ -32,10 +28,10 @@
           <li><a href="subjects/primary-school-science/index.html">Primary Science</a></li>
         </ul>
       </li>
-      <li><a href="bookings.html">Book a Lesson</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#tutors">Tutors</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="bookings.html" class="button-bordered">Book a Lesson</a></li>
+      <li><a href="#about" class="button-bordered">About Us</a></li>
+      <li><a href="#tutors" class="button-bordered">Tutors</a></li>
+      <li><a href="#contact" class="button-bordered">Contact</a></li>
     </ul>
     <div class="hamburger" onclick="document.querySelector('.nav-list').classList.toggle('active');">
       <div></div>
@@ -49,8 +45,8 @@
     <div class="hero-overlay">
       <h1>C&A Study Support</h1>
       <p>Making learning easy for everyone with personalised tutoring</p>
-      <a href="bookings.html"><button class="primary-button">Book a Lesson</button></a>
-      <a href="#contact"><button class="primary-button">Contact Us</button></a>
+      <a href="bookings.html" class="button-bordered">Book a Lesson</a>
+      <a href="#contact" class="button-bordered">Contact Us</a>
     </div>
   </section>
 
@@ -82,19 +78,19 @@
   <!-- Subjects -->
   <section id="subjects-overview" class="fade-in">
     <h2>Subjects We Teach</h2>
-    <div class="card-container">
-      <div class="card"><h3>Specialist Maths</h3></div>
-      <div class="card"><h3>Mathematical Methods</h3></div>
-      <div class="card"><h3>English Literature</h3></div>
-      <div class="card"><h3>Russian</h3></div>
-      <div class="card"><h3>Bengali</h3></div>
-      <div class="card"><h3>Economics</h3></div>
-      <div class="card"><h3>Biology</h3></div>
-      <div class="card"><h3>Chemistry</h3></div>
-      <div class="card"><h3>Psychology</h3></div>
-      <div class="card"><h3>Primary School Maths</h3></div>
-      <div class="card"><h3>Primary School English</h3></div>
-      <div class="card"><h3>Primary School Science</h3></div>
+    <div class="subject-grid">
+      <div class="subject-button">Specialist Maths</div>
+      <div class="subject-button">Mathematical Methods</div>
+      <div class="subject-button">English Literature</div>
+      <div class="subject-button">Russian</div>
+      <div class="subject-button">Bengali</div>
+      <div class="subject-button">Economics</div>
+      <div class="subject-button">Biology</div>
+      <div class="subject-button">Chemistry</div>
+      <div class="subject-button">Psychology</div>
+      <div class="subject-button">Primary Maths</div>
+      <div class="subject-button">Primary English</div>
+      <div class="subject-button">Primary Science</div>
     </div>
   </section>
 
@@ -103,36 +99,25 @@
   <!-- Contact -->
   <section id="contact" class="fade-in">
     <h2>Contact Us</h2>
-    <p>Have questions or want to book a lesson? Fill out the form below:</p>
+    <p>Have questions or want to book a lesson? Contact us now:</p>
 
-    <form id="contact-form" action="https://formspree.io/f/mdaanozr" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit" class="primary-button">Send Message</button>
+    <form id="contact-form" class="contact-form-inline" action="https://formspree.io/f/mdaanozr" method="POST">
+      <input type="text" id="name" name="name" placeholder="Name" required>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+      <textarea id="message" name="message" placeholder="Message" rows="3" required></textarea>
+      <button type="submit" class="button-bordered">Send</button>
     </form>
   </section>
 
   <!-- Footer -->
   <footer class="site-footer">
-  <p>&copy; 2026 C&A Study Support</p>
-
-  <div class="youtube-link">
-    <a href="https://www.youtube.com/@CAStudySupport77"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="C&A Study Support YouTube Channel">
-      <img src="images/youtube-logo.svg" alt="YouTube" />
-    </a>
-  </div>
-</footer>
-
+    <p>&copy; 2026 C&A Study Support</p>
+    <div class="youtube-link">
+      <a href="https://www.youtube.com/@CAStudySupport77" target="_blank" rel="noopener noreferrer" aria-label="C&A Study Support YouTube Channel">
+        <img src="images/youtube-logo.svg" alt="YouTube" />
+      </a>
+    </div>
+  </footer>
 
   <!-- Scripts -->
   <script>
@@ -154,16 +139,23 @@
       });
     });
 
-    // Staggered fade-in for cards
+    // Staggered fade-in for cards, hero buttons, subject buttons
     const allCards = document.querySelectorAll('.card');
+    const heroButtons = document.querySelectorAll('#hero .button-bordered');
+    const subjectButtons = document.querySelectorAll('.subject-button');
+
     const fadeOnScroll = () => {
-      allCards.forEach((card, index) => {
-        const rect = card.getBoundingClientRect();
+      [...allCards, ...subjectButtons].forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
         if(rect.top < window.innerHeight - 50){
-          setTimeout(()=>{ card.classList.add('visible'); }, index * 150);
+          setTimeout(()=>{ el.classList.add('visible'); }, index * 100);
         }
       });
+      heroButtons.forEach((btn, index) => {
+        btn.classList.add('visible'); // fade in immediately
+      });
     }
+
     window.addEventListener('scroll', fadeOnScroll);
     window.addEventListener('load', fadeOnScroll);
 
