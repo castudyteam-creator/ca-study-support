@@ -145,15 +145,21 @@
     const subjectButtons = document.querySelectorAll('.subject-button');
 
     const fadeOnScroll = () => {
-      [...allCards, ...subjectButtons].forEach((el, index) => {
+      allCards.forEach((el, index) => {
         const rect = el.getBoundingClientRect();
         if(rect.top < window.innerHeight - 50){
+          setTimeout(()=>{ el.classList.add('visible'); }, index * 150);
+        }
+      });
+
+      subjectButtons.forEach((el, index) => {
+        const rect = el.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 50 && !el.classList.contains('visible')){
           setTimeout(()=>{ el.classList.add('visible'); }, index * 100);
         }
       });
-      heroButtons.forEach((btn, index) => {
-        btn.classList.add('visible'); // fade in immediately
-      });
+
+      heroButtons.forEach(btn => btn.classList.add('visible'));
     }
 
     window.addEventListener('scroll', fadeOnScroll);
