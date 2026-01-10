@@ -3,104 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Primary School Maths Tutoring | C&A Study Support</title>
+  <title><!-- SUBJECT NAME --> Tutoring | C&A Study Support</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="../russian/index.html">Russian</a></li>
-          <li><a href="../bengali/index.html">Bengali</a></li>
-          <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
-          <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
-          <li><a href="../biology/index.html">Biology</a></li>
-          <li><a href="../chemistry/index.html">Chemistry</a></li>
-          <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
-          <li><a href="../english-literature/index.html">English Literature</a></li>
-          <li><a href="../primary-school-english/index.html">Primary English</a></li>
-          <li><a href="../economics/index.html">Economics</a></li>
-          <li><a href="../psychology/index.html">Psychology</a></li>
-          <li><a href="../primary-school-science/index.html">Primary Science</a></li>
-        </ul>
-      </li>
-      <li><a href="../bookings.html">Book a Lesson</a></li>
-      <li><a href="../index.html#about">About Us</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar">
+  <div class="logo">
+    <a href="../index.html">C&A Study Support</a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
+        <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
+        <li><a href="../english-literature/index.html">English Literature</a></li>
+        <li><a href="../russian/index.html">Russian</a></li>
+        <li><a href="../bengali/index.html">Bengali</a></li>
+        <li><a href="../economics/index.html">Economics</a></li>
+        <li><a href="../biology/index.html">Biology</a></li>
+        <li><a href="../chemistry/index.html">Chemistry</a></li>
+        <li><a href="../psychology/index.html">Psychology</a></li>
+        <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
+        <li><a href="../primary-school-english/index.html">Primary English</a></li>
+        <li><a href="../primary-school-science/index.html">Primary Science</a></li>
+      </ul>
+    </li>
+    <li><a href="../bookings.html">Book a Lesson</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="hero" class="hero">
+<section id="hero">
   <div class="hero-overlay">
-    <h1>Primary School Maths</h1>
-    <p>Develop foundational numeracy skills and problem-solving confidence</p>
+    <h1><!-- SUBJECT NAME --></h1>
+    <p><!-- SUBJECT TAGLINE --></p>
   </div>
 </section>
 
 <main>
   <section>
-    <h2>About Primary Maths Tutoring</h2>
-    <p>
-      Our Primary Maths tutoring helps young learners build a strong foundation in numeracy, 
-      problem-solving, and mathematical reasoning, preparing them for success in school and beyond.
-    </p>
-
-    <h2>Lesson Structure</h2>
-    <ul>
-      <li>Number sense, counting, and basic operations</li>
-      <li>Fractions, decimals, and percentages</li>
-      <li>Introduction to geometry and measurement</li>
-      <li>Word problems and applied problem-solving</li>
-      <li>Games and activities to reinforce mathematical concepts</li>
-    </ul>
-
-    <h2>Who This Is For</h2>
-    <ul>
-      <li>Primary school students seeking to improve confidence in maths</li>
-      <li>Students needing support with school assignments or tests</li>
-      <li>Young learners who benefit from structured, one-on-one guidance</li>
-    </ul>
-
-    <h2>Resources</h2>
-    <p>
-      Students receive worksheets, practice exercises, interactive games, and step-by-step 
-      explanations tailored to their level and learning goals.
-    </p>
-
-    <a class="btn-primary" href="../index.html#subjects">Back to Subjects</a>
+    <!-- SUBJECT CONTENT -->
+    <a class="primary-button" href="../index.html#subjects-overview">
+      Back to Subjects
+    </a>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 C&A Study Support</p>
-</footer>
-
-</body>
-<!-- FOOTER -->
-<footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
 </footer>
 
-<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
 <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-
-  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(el => {
     el.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         el.parentElement.classList.toggle('active');
       }
@@ -108,4 +69,5 @@
   });
 </script>
 
+</body>
 </html>

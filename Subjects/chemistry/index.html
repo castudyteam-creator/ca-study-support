@@ -3,116 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chemistry Tutoring | C&A Study Support</title>
+  <title><!-- SUBJECT NAME --> Tutoring | C&A Study Support</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="../russian/index.html">Russian</a></li>
-          <li><a href="../bengali/index.html">Bengali</a></li>
-          <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
-          <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
-          <li><a href="../biology/index.html">Biology</a></li>
-          <li><a href="../chemistry/index.html">Chemistry</a></li>
-          <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
-          <li><a href="../english-literature/index.html">English Literature</a></li>
-          <li><a href="../primary-school-english/index.html">Primary English</a></li>
-          <li><a href="../economics/index.html">Economics</a></li>
-          <li><a href="../psychology/index.html">Psychology</a></li>
-          <li><a href="../primary-school-science/index.html">Primary Science</a></li>
-        </ul>
-      </li>
-      <li><a href="../bookings.html">Book a Lesson</a></li>
-      <li><a href="../index.html#about">About Us</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar">
+  <div class="logo">
+    <a href="../index.html">C&A Study Support</a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
+        <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
+        <li><a href="../english-literature/index.html">English Literature</a></li>
+        <li><a href="../russian/index.html">Russian</a></li>
+        <li><a href="../bengali/index.html">Bengali</a></li>
+        <li><a href="../economics/index.html">Economics</a></li>
+        <li><a href="../biology/index.html">Biology</a></li>
+        <li><a href="../chemistry/index.html">Chemistry</a></li>
+        <li><a href="../psychology/index.html">Psychology</a></li>
+        <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
+        <li><a href="../primary-school-english/index.html">Primary English</a></li>
+        <li><a href="../primary-school-science/index.html">Primary Science</a></li>
+      </ul>
+    </li>
+    <li><a href="../bookings.html">Book a Lesson</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="hero" class="hero">
+<section id="hero">
   <div class="hero-overlay">
-    <h1>Chemistry</h1>
-    <p>Comprehensive chemistry tutoring from basics to advanced concepts</p>
+    <h1><!-- SUBJECT NAME --></h1>
+    <p><!-- SUBJECT TAGLINE --></p>
   </div>
 </section>
 
 <main>
   <section>
-    <h2>About Chemistry Tutoring</h2>
-    <p>
-      Our Chemistry tutoring focuses on building conceptual understanding,
-      problem-solving skills, and practical application through structured lessons
-      and targeted exercises.
-    </p>
-
-    <h2>Lesson Structure</h2>
-    <ul>
-      <li>Fundamental concepts in atomic structure, bonding, and reactions</li>
-      <li>Practical problem-solving and worked examples</li>
-      <li>Laboratory theory and experiment analysis</li>
-      <li>Exam preparation and past paper practice</li>
-      <li>Concept reinforcement through quizzes and exercises</li>
-    </ul>
-
-    <h2>Key Topics Covered</h2>
-    <ul>
-      <li>Atoms, molecules, and chemical bonding</li>
-      <li>Stoichiometry and chemical calculations</li>
-      <li>Acids, bases, and pH</li>
-      <li>Chemical kinetics and equilibrium</li>
-      <li>Organic chemistry basics</li>
-      <li>Thermochemistry and energy changes</li>
-      <li>Electrochemistry and redox reactions</li>
-    </ul>
-
-    <h2>Who This Is For</h2>
-    <ul>
-      <li>Secondary school chemistry students</li>
-      <li>Students preparing for exams or assessments</li>
-      <li>Students needing help with chemical reasoning and calculations</li>
-    </ul>
-
-    <h2>Resources</h2>
-    <p>
-      Students receive tailored worksheets, guided problem sets, past exam questions,
-      and concise revision summaries aligned to their level and curriculum.
-    </p>
-
-    <a class="btn-primary" href="../index.html#subjects">Back to Subjects</a>
+    <!-- SUBJECT CONTENT -->
+    <a class="primary-button" href="../index.html#subjects-overview">
+      Back to Subjects
+    </a>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 C&A Study Support</p>
-</footer>
-
-</body>
-<!-- FOOTER -->
-<footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
 </footer>
 
-<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
 <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-
-  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(el => {
     el.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         el.parentElement.classList.toggle('active');
       }
@@ -120,6 +69,7 @@
   });
 </script>
 
+</body>
 </html>
 
 

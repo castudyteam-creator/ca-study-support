@@ -3,113 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>English Literature Tutoring | C&A Study Support</title>
+  <title><!-- SUBJECT NAME --> Tutoring | C&A Study Support</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="../russian/index.html">Russian</a></li>
-          <li><a href="../bengali/index.html">Bengali</a></li>
-          <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
-          <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
-          <li><a href="../biology/index.html">Biology</a></li>
-          <li><a href="../chemistry/index.html">Chemistry</a></li>
-          <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
-          <li><a href="../english-literature/index.html">English Literature</a></li>
-          <li><a href="../primary-school-english/index.html">Primary English</a></li>
-          <li><a href="../economics/index.html">Economics</a></li>
-          <li><a href="../psychology/index.html">Psychology</a></li>
-          <li><a href="../primary-school-science/index.html">Primary Science</a></li>
-        </ul>
-      </li>
-      <li><a href="../bookings.html">Book a Lesson</a></li>
-      <li><a href="../index.html#about">About Us</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<nav class="navbar">
+  <div class="logo">
+    <a href="../index.html">C&A Study Support</a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
+        <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
+        <li><a href="../english-literature/index.html">English Literature</a></li>
+        <li><a href="../russian/index.html">Russian</a></li>
+        <li><a href="../bengali/index.html">Bengali</a></li>
+        <li><a href="../economics/index.html">Economics</a></li>
+        <li><a href="../biology/index.html">Biology</a></li>
+        <li><a href="../chemistry/index.html">Chemistry</a></li>
+        <li><a href="../psychology/index.html">Psychology</a></li>
+        <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
+        <li><a href="../primary-school-english/index.html">Primary English</a></li>
+        <li><a href="../primary-school-science/index.html">Primary Science</a></li>
+      </ul>
+    </li>
+    <li><a href="../bookings.html">Book a Lesson</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="hero" class="hero">
+<section id="hero">
   <div class="hero-overlay">
-    <h1>English Literature</h1>
-    <p>Guided tutoring for reading, analysis, and essay writing</p>
+    <h1><!-- SUBJECT NAME --></h1>
+    <p><!-- SUBJECT TAGLINE --></p>
   </div>
 </section>
 
 <main>
   <section>
-    <h2>About English Literature Tutoring</h2>
-    <p>
-      Our English Literature tutoring helps students understand and interpret literary
-      texts, develop critical thinking skills, and structure coherent analytical essays.
-    </p>
-
-    <h2>Lesson Structure</h2>
-    <ul>
-      <li>Close reading of texts and thematic analysis</li>
-      <li>Understanding literary devices and techniques</li>
-      <li>Essay writing structure and argument development</li>
-      <li>Comparative analysis across genres and periods</li>
-      <li>Exam and assessment preparation</li>
-    </ul>
-
-    <h2>Key Topics Covered</h2>
-    <ul>
-      <li>Poetry, drama, and prose analysis</li>
-      <li>Shakespeare and classical literature</li>
-      <li>Modern and contemporary texts</li>
-      <li>Critical theory and literary interpretation</li>
-      <li>Contextual analysis: historical, social, and cultural</li>
-    </ul>
-
-    <h2>Who This Is For</h2>
-    <ul>
-      <li>High school and pre-university students</li>
-      <li>Students preparing for literary essays and exams</li>
-      <li>Students looking to improve comprehension, analysis, and writing skills</li>
-    </ul>
-
-    <h2>Resources</h2>
-    <p>
-      Students receive guided reading notes, sample essays, worksheets, and annotated
-      texts to support learning and exam preparation.
-    </p>
-
-    <a class="btn-primary" href="../index.html#subjects">Back to Subjects</a>
+    <!-- SUBJECT CONTENT -->
+    <a class="primary-button" href="../index.html#subjects-overview">
+      Back to Subjects
+    </a>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 C&A Study Support</p>
-</footer>
-
-</body>
-<!-- FOOTER -->
-<footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
 </footer>
 
-<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
 <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-
-  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(el => {
     el.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         el.parentElement.classList.toggle('active');
       }
@@ -117,4 +69,5 @@
   });
 </script>
 
+</body>
 </html>

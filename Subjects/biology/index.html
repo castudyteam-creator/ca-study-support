@@ -6,37 +6,41 @@
   <title>Biology Tutoring | C&A Study Support</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="../russian/index.html">Russian</a></li>
-          <li><a href="../bengali/index.html">Bengali</a></li>
-          <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
-          <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
-          <li><a href="../biology/index.html">Biology</a></li>
-          <li><a href="../chemistry/index.html">Chemistry</a></li>
-          <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
-          <li><a href="../english-literature/index.html">English Literature</a></li>
-          <li><a href="../primary-school-english/index.html">Primary English</a></li>
-          <li><a href="../economics/index.html">Economics</a></li>
-          <li><a href="../psychology/index.html">Psychology</a></li>
-          <li><a href="../primary-school-science/index.html">Primary Science</a></li>
-        </ul>
-      </li>
-      <li><a href="../bookings.html">Book a Lesson</a></li>
-      <li><a href="../index.html#about">About Us</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="../index.html">C&A Study Support</a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
+        <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
+        <li><a href="../english-literature/index.html">English Literature</a></li>
+        <li><a href="../russian/index.html">Russian</a></li>
+        <li><a href="../bengali/index.html">Bengali</a></li>
+        <li><a href="../economics/index.html">Economics</a></li>
+        <li><a href="../biology/index.html">Biology</a></li>
+        <li><a href="../chemistry/index.html">Chemistry</a></li>
+        <li><a href="../psychology/index.html">Psychology</a></li>
+        <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
+        <li><a href="../primary-school-english/index.html">Primary English</a></li>
+        <li><a href="../primary-school-science/index.html">Primary Science</a></li>
+      </ul>
+    </li>
+    <li><a href="../bookings.html">Book a Lesson</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="hero" class="hero">
+<!-- Hero -->
+<section id="hero">
   <div class="hero-overlay">
     <h1>Biology</h1>
     <p>Clear, structured biology tutoring from fundamentals to exam readiness</p>
@@ -47,72 +51,56 @@
   <section>
     <h2>About Biology Tutoring</h2>
     <p>
-      Our Biology tutoring focuses on developing strong conceptual understanding,
-      accurate scientific language, and exam-ready application skills across key
-      biological systems and processes.
+      Our Biology tutoring develops strong conceptual understanding, precise
+      scientific language, and exam-ready application skills.
     </p>
 
     <h2>Lesson Structure</h2>
     <ul>
-      <li>Core concept explanation using diagrams and models</li>
-      <li>Application to exam-style and data-based questions</li>
-      <li>Scientific terminology and definition precision</li>
-      <li>Revision strategies and active recall techniques</li>
-      <li>Practice questions with targeted feedback</li>
+      <li>Concept explanation using diagrams and models</li>
+      <li>Exam-style and data-based application</li>
+      <li>Scientific terminology precision</li>
+      <li>Revision and active recall techniques</li>
+      <li>Targeted feedback on practice questions</li>
     </ul>
 
     <h2>Key Topics Covered</h2>
     <ul>
       <li>Cell structure and function</li>
       <li>Biomolecules and enzymes</li>
-      <li>Photosynthesis and cellular respiration</li>
-      <li>Genetics, DNA, and inheritance</li>
-      <li>Homeostasis and body systems</li>
-      <li>Evolution and natural selection</li>
-      <li>Ecology and ecosystems</li>
+      <li>Photosynthesis and respiration</li>
+      <li>Genetics and inheritance</li>
+      <li>Homeostasis and systems</li>
+      <li>Evolution and ecology</li>
     </ul>
 
     <h2>Who This Is For</h2>
     <ul>
       <li>Secondary school biology students</li>
-      <li>Students preparing for exams and assessments</li>
-      <li>Students needing support with scientific writing and data analysis</li>
+      <li>Exam and assessment preparation</li>
+      <li>Scientific writing and data analysis support</li>
     </ul>
 
     <h2>Resources</h2>
     <p>
-      Students receive tailored worksheets, annotated diagrams, exam-style questions,
-      and structured revision summaries aligned to their curriculum and level.
+      Students receive tailored worksheets, annotated diagrams, exam-style
+      questions, and structured revision summaries.
     </p>
 
-    <a class="btn-primary" href="../index.html#subjects">Back to Subjects</a>
+    <a class="primary-button" href="../index.html#subjects-overview">
+      Back to Subjects
+    </a>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 C&A Study Support</p>
-</footer>
-
-</body>
-<!-- FOOTER -->
-<footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
 </footer>
 
-<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
 <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-
-  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(el => {
     el.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         el.parentElement.classList.toggle('active');
       }
@@ -120,4 +108,5 @@
   });
 </script>
 
+</body>
 </html>

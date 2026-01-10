@@ -6,37 +6,41 @@
   <title>Bengali Tutoring | C&A Study Support</title>
   <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
 
-<header>
-  <nav class="navbar">
-    <ul class="nav-list">
-      <li><a href="../index.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Subjects</a>
-        <ul class="dropdown-content">
-          <li><a href="../russian/index.html">Russian</a></li>
-          <li><a href="../bengali/index.html">Bengali</a></li>
-          <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
-          <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
-          <li><a href="../biology/index.html">Biology</a></li>
-          <li><a href="../chemistry/index.html">Chemistry</a></li>
-          <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
-          <li><a href="../english-literature/index.html">English Literature</a></li>
-          <li><a href="../primary-school-english/index.html">Primary English</a></li>
-          <li><a href="../economics/index.html">Economics</a></li>
-          <li><a href="../psychology/index.html">Psychology</a></li>
-          <li><a href="../primary-school-science/index.html">Primary Science</a></li>
-        </ul>
-      </li>
-      <li><a href="../bookings.html">Book a Lesson</a></li>
-      <li><a href="../index.html#about">About Us</a></li>
-      <li><a href="../index.html#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="../index.html">C&A Study Support</a>
+  </div>
+  <ul class="nav-list">
+    <li><a href="../index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
+      <ul class="dropdown-content">
+        <li><a href="../specialist-maths/index.html">Specialist Maths</a></li>
+        <li><a href="../mathematical-methods/index.html">Mathematical Methods</a></li>
+        <li><a href="../english-literature/index.html">English Literature</a></li>
+        <li><a href="../russian/index.html">Russian</a></li>
+        <li><a href="../bengali/index.html">Bengali</a></li>
+        <li><a href="../economics/index.html">Economics</a></li>
+        <li><a href="../biology/index.html">Biology</a></li>
+        <li><a href="../chemistry/index.html">Chemistry</a></li>
+        <li><a href="../psychology/index.html">Psychology</a></li>
+        <li><a href="../primary-school-maths/index.html">Primary Maths</a></li>
+        <li><a href="../primary-school-english/index.html">Primary English</a></li>
+        <li><a href="../primary-school-science/index.html">Primary Science</a></li>
+      </ul>
+    </li>
+    <li><a href="../bookings.html">Book a Lesson</a></li>
+    <li><a href="../index.html#about">About Us</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+</nav>
 
-<section id="hero" class="hero">
+<!-- Hero -->
+<section id="hero">
   <div class="hero-overlay">
     <h1>Bengali</h1>
     <p>Structured Bengali language tutoring for clear communication</p>
@@ -48,60 +52,44 @@
     <h2>About Bengali Tutoring</h2>
     <p>
       Our Bengali tutoring focuses on developing confident communication skills
-      through a structured approach to grammar, vocabulary, pronunciation, and
-      cultural context.
+      through grammar, vocabulary, pronunciation, and cultural context.
     </p>
 
     <h2>Lesson Structure</h2>
     <ul>
       <li>Script (Bangla) reading and writing</li>
       <li>Pronunciation and phonetics</li>
-      <li>Grammar fundamentals and sentence structure</li>
-      <li>Vocabulary building for everyday use</li>
-      <li>Listening comprehension and speaking practice</li>
+      <li>Grammar fundamentals</li>
+      <li>Vocabulary building</li>
+      <li>Listening and speaking practice</li>
     </ul>
 
     <h2>Who This Is For</h2>
     <ul>
-      <li>Beginners with no prior knowledge</li>
-      <li>Heritage speakers seeking literacy support</li>
-      <li>Students learning Bengali for academic or personal reasons</li>
+      <li>Beginners</li>
+      <li>Heritage speakers</li>
+      <li>Academic learners</li>
     </ul>
 
     <h2>Resources</h2>
     <p>
-      Students receive customised worksheets, reading passages, vocabulary lists,
-      and guided exercises tailored to their level and learning goals.
+      Students receive customised worksheets and guided exercises.
     </p>
 
-    <a class="btn-primary" href="../index.html#subjects">Back to Subjects</a>
+    <a class="primary-button" href="../index.html#subjects-overview">
+      Back to Subjects
+    </a>
   </section>
 </main>
 
 <footer>
-  <p>&copy; 2025 C&A Study Support</p>
-</footer>
-
-</body>
-<!-- FOOTER -->
-<footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
 </footer>
 
-<!-- OPTIONAL: scripts for smooth scroll and mobile dropdown -->
 <script>
-  // Smooth scroll for internal links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e){
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-    });
-  });
-
-  // Dropdown toggle for mobile
   document.querySelectorAll('.dropdown > a').forEach(el => {
     el.addEventListener('click', e => {
-      if(window.innerWidth <= 768){
+      if (window.innerWidth <= 768) {
         e.preventDefault();
         el.parentElement.classList.toggle('active');
       }
@@ -109,4 +97,5 @@
   });
 </script>
 
+</body>
 </html>
