@@ -43,3 +43,8 @@ if (form) {
     if (res.ok) form.reset();
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".subject-button").forEach(btn => {
+    btn.classList.add("visible");
+  });
+});
