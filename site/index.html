@@ -4,146 +4,82 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>C&A Study Support</title>
-<meta name="description" content="C&A Study Support offers personalised tutoring for secondary and primary school students. Learn Maths, English, Science, and languages with experienced tutors Caleb and Abraur.">
+<meta name="description" content="C&A Study Support offers personalised tutoring for secondary and primary school students.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
   <div class="logo">C&A Study Support</div>
   <ul class="nav-list">
     <li><a href="index.html" class="active">Home</a></li>
-    <li class="dropdown"><a href="#">Subjects</a>
+    <li class="dropdown">
+      <a href="#">Subjects</a>
       <ul class="dropdown-content">
-        <li><a href="subjects/specialist-maths/index.html">Specialist Maths</a></li>
-        <li><a href="subjects/mathematical-methods/index.html">Mathematical Methods</a></li>
-        <li><a href="subjects/english-literature/index.html">English Literature</a></li>
-        <li><a href="subjects/russian/index.html">Russian</a></li>
-        <li><a href="subjects/bengali/index.html">Bengali</a></li>
-        <li><a href="subjects/economics/index.html">Economics</a></li>
-        <li><a href="subjects/biology/index.html">Biology</a></li>
-        <li><a href="subjects/chemistry/index.html">Chemistry</a></li>
-        <li><a href="subjects/psychology/index.html">Psychology</a></li>
-        <li><a href="subjects/primary-school-maths/index.html">Primary Maths</a></li>
-        <li><a href="subjects/primary-school-english/index.html">Primary English</a></li>
-        <li><a href="subjects/primary-school-science/index.html">Primary Science</a></li>
+        <li><a href="subjects/specialist-maths.html">Specialist Maths</a></li>
+        <li><a href="subjects/maths-methods.html">Mathematical Methods</a></li>
+        <li><a href="subjects/english-literature.html">English Literature</a></li>
+        <li><a href="subjects/russian.html">Russian</a></li>
+        <li><a href="subjects/bengali.html">Bengali</a></li>
+        <li><a href="subjects/economics.html">Economics</a></li>
+        <li><a href="subjects/biology.html">Biology</a></li>
+        <li><a href="subjects/chemistry.html">Chemistry</a></li>
+        <li><a href="subjects/psychology.html">Psychology</a></li>
+        <li><a href="subjects/primary-maths.html">Primary Maths</a></li>
+        <li><a href="subjects/primary-english.html">Primary English</a></li>
+        <li><a href="subjects/primary-science.html">Primary Science</a></li>
       </ul>
     </li>
     <li><a href="#tutors">Tutors</a></li>
     <li><a href="bookings.html">Book a Lesson</a></li>
-    <li><a href="#contact">Contact Us</a></li>
-    <li><a href="#about">About Us</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="hamburger" onclick="document.querySelector('.nav-list').classList.toggle('active');">
     <div></div><div></div><div></div>
   </div>
 </nav>
 
-<!-- Hero -->
 <section id="hero">
   <div class="hero-overlay">
     <h1>C&A Study Support</h1>
-    <p>Making learning easy for everyone with personalised tutoring</p>
+    <p>Making learning easy with personalised tutoring</p>
     <a href="bookings.html"><button class="primary-button">Book a Lesson</button></a>
-    <a href="#contact"><button class="primary-button">Contact Us</button></a>
   </div>
 </section>
 
-<!-- About -->
-<section id="about">
-  <h2>About Us</h2>
-  <p>Formed in 2025 by Caleb Packer and Abraur Ullah, C&A Study Support provides personalised tutoring for all students. We recognise everyone learns differently and tailor lessons to maximise results and confidence.</p>
-</section>
-
-<div class="section-separator"></div>
-
-<!-- Tutors -->
-<section id="tutors">
-  <h2>Meet Our Tutors</h2>
-  <div class="card-container">
-    <a href="tutors/caleb.html" class="subject-card">
-      <div class="card tutor-card">
-        <h3>Caleb</h3>
-        <div class="subjects-list">
-          <span>Specialist Maths</span>
-          <span>Mathematical Methods</span>
-          <span>English Literature</span>
-          <span>Russian</span>
-          <span>Economics</span>
-          <span>Biology</span>
-          <span>Chemistry</span>
-          <span>Primary Maths</span>
-          <span>Primary English</span>
-          <span>Primary Science</span>
-        </div>
-      </div>
-    </a>
-    <a href="tutors/abraur.html" class="subject-card">
-      <div class="card tutor-card">
-        <h3>Abraur</h3>
-        <div class="subjects-list">
-          <span>Specialist Maths</span>
-          <span>Mathematical Methods</span>
-          <span>English Literature</span>
-          <span>Bengali</span>
-          <span>Psychology</span>
-          <span>Biology</span>
-          <span>Chemistry</span>
-          <span>Primary Maths</span>
-          <span>Primary English</span>
-          <span>Primary Science</span>
-        </div>
-      </div>
-    </a>
-  </div>
-</section>
-
-<div class="section-separator"></div>
-
-<!-- Subjects -->
 <section id="subjects-overview">
   <h2>Subjects We Teach</h2>
   <div class="subject-grid">
-    <a href="subjects/specialist-maths/index.html" class="subject-button">Specialist Maths</a>
-    <a href="subjects/mathematical-methods/index.html" class="subject-button">Mathematical Methods</a>
-    <a href="subjects/english-literature/index.html" class="subject-button">English Literature</a>
-    <a href="subjects/russian/index.html" class="subject-button">Russian</a>
-    <a href="subjects/bengali/index.html" class="subject-button">Bengali</a>
-    <a href="subjects/economics/index.html" class="subject-button">Economics</a>
-    <a href="subjects/biology/index.html" class="subject-button">Biology</a>
-    <a href="subjects/chemistry/index.html" class="subject-button">Chemistry</a>
-    <a href="subjects/psychology/index.html" class="subject-button">Psychology</a>
-    <a href="subjects/primary-school-maths/index.html" class="subject-button">Primary Maths</a>
-    <a href="subjects/primary-school-english/index.html" class="subject-button">Primary English</a>
-    <a href="subjects/primary-school-science/index.html" class="subject-button">Primary Science</a>
+    <a href="subjects/specialist-maths.html" class="subject-button">Specialist Maths</a>
+    <a href="subjects/maths-methods.html" class="subject-button">Mathematical Methods</a>
+    <a href="subjects/english-literature.html" class="subject-button">English Literature</a>
+    <a href="subjects/russian.html" class="subject-button">Russian</a>
+    <a href="subjects/bengali.html" class="subject-button">Bengali</a>
+    <a href="subjects/economics.html" class="subject-button">Economics</a>
+    <a href="subjects/biology.html" class="subject-button">Biology</a>
+    <a href="subjects/chemistry.html" class="subject-button">Chemistry</a>
+    <a href="subjects/psychology.html" class="subject-button">Psychology</a>
+    <a href="subjects/primary-maths.html" class="subject-button">Primary Maths</a>
+    <a href="subjects/primary-english.html" class="subject-button">Primary English</a>
+    <a href="subjects/primary-science.html" class="subject-button">Primary Science</a>
   </div>
 </section>
 
-<div class="section-separator"></div>
-
-<!-- Contact -->
-<section id="contact" class="contact-section">
+<section id="contact">
   <h2>Contact Us</h2>
-  <p>Have questions or want to book a lesson? Fill out the form below:</p>
-  <form id="contact-form" class="contact-form-inline" action="https://formspree.io/f/mdaanozr" method="POST">
-    <input type="text" id="name" name="name" placeholder="Name" required>
-    <input type="email" id="email" name="email" placeholder="Email" required>
-    <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
-    <button type="submit" class="primary-button">Send Message</button>
+  <form id="contact-form" action="https://formspree.io/f/mdaanozr" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit" class="primary-button">Send</button>
   </form>
 </section>
 
-<!-- Footer -->
 <footer class="site-footer">
   <p>&copy; 2026 C&A Study Support</p>
-  <div class="youtube-link">
-    <a href="https://www.youtube.com/@CAStudySupport77" target="_blank" rel="noopener noreferrer">
-      <img src="images/youtube-logo.svg" alt="YouTube" />
-    </a>
-  </div>
 </footer>
 
-<script src="scripts.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
